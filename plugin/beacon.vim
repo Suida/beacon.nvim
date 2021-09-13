@@ -1,5 +1,7 @@
-" do not load plugin twice (get weird errors)
-if get(g:, "beacon_loaded", 0)
+" do not load plugin:
+"   - twice (get weird errors)
+"   - in diff mode
+if get(g:, "beacon_loaded", 0) || &diff
     finish
 endif
 
